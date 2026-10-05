@@ -19,7 +19,7 @@ export default function QuoteForm({ preselectedSlug = "" }) {
     const data = new FormData(form);
 
     // Web3Forms — replace ACCESS_KEY with your key from https://web3forms.com
-    data.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "7fe40b3e-15ae-45db-aaa8-6dc45972da00");
+    data.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
     data.append("subject", `Quote request — ${data.get("machine") || "General"}`);
     data.append("from_name", site.name);
 
